@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+ <layer
+    name="iwlearn.diazo.theme"
+    interface="iwlearn.diazo.theme.browser.interfaces.IThemeSpecific"
+    />
+</layers>

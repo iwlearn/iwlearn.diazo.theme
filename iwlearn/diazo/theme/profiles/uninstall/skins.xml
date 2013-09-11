@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="portal_skins">
+
+ <skin-path name="*">
+  <layer name="iwlearn_diazo_theme_images" remove="True" />
+  <layer name="iwlearn_diazo_theme_templates" remove="True" />
+  <layer name="iwlearn_diazo_theme_styles" remove="True" />
+  <layer name="iwlearn_diazo_theme_javascripts" remove="True" />
+ </skin-path>
+
+</object>

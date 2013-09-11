@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<object name="portal_skins" allow_any="False" cookie_persistence="False"
+   default_skin="iwlearn_diazo_theme">
+
+ <object name="iwlearn_diazo_theme_images"
+    meta_type="Filesystem Directory View"
+    directory="iwlearn.diazo.theme:skins/images" />
+ <object name="iwlearn_diazo_theme_templates"
+    meta_type="Filesystem Directory View"
+    directory="iwlearn.diazo.theme:skins/templates" />
+ <object name="iwlearn_diazo_theme_styles"
+    meta_type="Filesystem Directory View"
+    directory="iwlearn.diazo.theme:skins/styles" />
+ <object name="iwlearn_diazo_theme_javascripts"
+    meta_type="Filesystem Directory View"
+    directory="iwlearn.diazo.theme:skins/javascripts" />
+
+ <skin-path
+    name="iwlearn_diazo_theme"
+    based-on="Sunburst Theme"
+    >
+  <layer
+     name="iwlearn_diazo_theme_images"
+     insert-after="custom"
+     />
+  <layer
+     name="iwlearn_diazo_theme_templates"
+     insert-after="iwlearn_diazo_theme_images"
+     />
+  <layer
+     name="iwlearn_diazo_theme_styles"
+     insert-after="iwlearn_diazo_theme_templates"
+     />
+  <layer
+      name="iwlearn_diazo_theme_javascripts"
+      insert-after="iwlearn_diazo_theme_styles"
+      />
+ </skin-path>
+
+</object>
