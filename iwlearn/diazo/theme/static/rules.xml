@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+
+
+
+
+  <theme href="theme.html" css:if-content="#visual-portal-wrapper" />
+
+<!-- ====================================================== -->
+<!-- Matches                                                -->
+<!-- ====================================================== -->
+
+
+  <!-- Rules for special cases in Plone sites -->
+  <notheme if-path="image_view_fullscreen" />
+  <notheme if-path="referencebrowser_popup" />
+  <notheme if-path="refbrowser_popup" />
+  <notheme if-path="filehtmlpreview_view" />
+  <notheme if-path="presentation_view" />
+  <notheme if-path="SFLight_event_view" />
+  <notheme if-path="portal_javascripts" />  <!-- TinyMCE -->
+  <notheme if-path="tinymce-upload" />  
+  <notheme if-path="bodytext_view.html" />
+  <notheme if-path="remotelink_view.html" />
+  <notheme if-path="linkchecker-startpage.html" />
+  <notheme if-path="opensearchresults.html" />
+  <notheme if-path="@@tagsnippets.html" />
+  <notheme if-path="@@chart_view.html" />
+  <notheme if-path="@@project-list-view.html" />
+  <!-- <notheme if-path="edit" />
+  <notheme if-path="@@manage-portlets" />
+  <notheme if-path="@@placegalleryview" /> -->
+  <notheme if-path="@@liches-ajax-insert.html" />
+  <notheme if-path="@@liches-ajax-portlet.html" />
+  
+  
+
+
+
+    <replace theme="/html/head/title" content="/html/head/title" />
+    <after content="/html/head/base" theme-children="/html/head" />
+    <after content="/html/head/meta" theme-children="/html/head" />
+
+    <!-- Copy style, script and link tags in the order they appear in the content -->
+    <before content="/html/head/style | /html/head/script | /html/head/link" theme-children="/html/head" />
+
+    <!--
+    <replace theme="/html/body/script" content="/html/body/div/script" />
+
+    -->
+
+    <after css:content="#fb-root" css:theme-children="#portal-top" />
+    <after content="//div[@id='portal-top']/div/script" theme-children="//div[@id='portal-top']" />
+   <!-- move portlets below content out of div#content -->
+    <!--drop css:theme=".BelowPortletManager1" css:if-not-content=".BelowPortletManager1" />
+    <drop css:theme="#portlets-below" css:if-not-content=".BelowPortletManager1" />
+    <append css:content-children=".BelowPortletManager1" css:theme-children=".BelowPortletManager1" css:if-content=".BelowPortletManager1" />
+    <drop css:theme=".BelowPortletManager3" css:if-not-content=".BelowPortletManager3" />
+    <replace css:content-children=".BelowPortletManager3" css:theme-children=".BelowPortletManager3" css:if-content=".BelowPortletManager3" />
+
+    <drop css:content="#portal-columns #portlets-below" /-->
+
+    <!-- drop first page title for old portletpage (testing) -->
+    <drop css:content=".section-international-waters-learning-exchange-and-resource-network .documentFirstHeading" />
+
+    <replace css:content-children="#document-action-sharerizer" css:theme-children="#portal-columns .social" />
+	 <drop css:content=".documentActions #document-action-sharerizer" />
+
+    <rules if-not-content="//form[@id='zc.page.browser_form']">
+        <!-- drop content if using contentwellportlets for first page (testing) -->
+        <drop css:content=".section-iw-learn #content" if-not-path="@@manage-portletsbelowcontent @@manage-portletsfooter edit @@portlets"  />
+    </rules>
+
+
+
+    <!-- then append main content -->
+    <after css:content-children="#portal-columns" css:theme-children="#portal-columns" />
+
+    <replace css:content="#portlets-footer" css:theme="#portlets-footer" />
+    <replace css:content=".manageFooterPortletsLink" css:theme=".manageFooterPortletsLink" />
+    <after css:content-children="#portal-footer" css:theme-children="#portal-footer" />
+    <before css:content-children="#c-doormat" css:theme-children="#c-doormat" />
+    <replace css:content="#portal-personaltools-wrapper" css:theme="#portal-personaltools-wrapper" />
+    <replace css:content="#portal-searchbox" css:theme="#portal-searchbox" />
+    <replace css:content="#portal-globalnav" css:theme="#portal-globalnav" />
+    <replace css:content="#portal-siteactions" css:theme="#portal-siteactions" />
+    <copy css:content="body" css:theme="body" attributes="*" />
+
+
+  
+
+</rules>
