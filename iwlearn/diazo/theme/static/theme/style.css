@@ -1070,11 +1070,17 @@ img.image-left, img.image-right, .captioned img {
     clear:none; 
 }
 
+.more-carousel {
+    background-color: #DDDDDD;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em 1em 1em 1em;
+    float: right;
+   
+    padding: 0.3em 0.5em;    
+}
+
 /* from plonecustom.css */
-
-
-
-
 .ui-widget-content .ui-state-default {
 background:url("images/ui-bg_glass_100_f6f6f6_1x400.png") repeat-x scroll 50% 50% #F6F6F6;
 color:#1C94C4;
