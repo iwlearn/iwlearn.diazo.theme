@@ -842,7 +842,7 @@ div.flexigrid {
 .summarylabel {
 	background: url('images_template/leftnav/leftnav_title_bg.jpg') repeat-x bottom left;
 }
-.portaltype-project #content-core {
+.portaltype-project #content-core,#portal-columns,#portal-footer-wrapper {
 	clear: both;
 }
 #category{
