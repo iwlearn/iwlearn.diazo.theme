@@ -16,17 +16,17 @@
    <browser:page
     name="carousel-view"
     for="Products.ATContentTypes.interface.IATNewsItem"
-    template="templates/news-tile.pt"
+    template="template/news-tile.pt"
     permission="zope2.View"
-    layer="..interfaces.IThemeSpecific"
+    layer=".interfaces.IThemeSpecific"
     />
 
   <!-- Views for carousel portlet -->
   <browser:page
     name="carousel-portlet-view"
     for="Products.ATContentTypes.interface.IATNewsItem"
-    template="templates/news-tile.pt"
+    template="template/news-tile.pt"
     permission="zope2.View"
-    layer="..interfaces.IThemeSpecific"
+    layer=".interfaces.IThemeSpecific"
     />
 </configure>
