@@ -80,7 +80,7 @@
     <!-- then append main content -->
     <after css:content-children="#portal-columns" css:theme-children="#portal-columns" />
 
-    <replace css:content="#portlets-footer" css:theme="#portlets-footer" />
+    <replace css:content-children="#portlets-footer" css:theme-children="#portlets-footer" />
     <replace css:content=".manageFooterPortletsLink" css:theme=".manageFooterPortletsLink" />
     <after css:content-children="#portal-footer" css:theme-children="#portal-footer" />
     <before css:content-children="#c-doormat" css:theme-children="#c-doormat" />
