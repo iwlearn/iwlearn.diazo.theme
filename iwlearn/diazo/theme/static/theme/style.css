@@ -714,35 +714,29 @@ dl.portlet ul.navTreeLevel0 > .navTreeItem a.state-published {
 	color: #666666;
 }
 /* end document actions */
-
+/*
 .section-iw-learn dl.portlet .portletFooter a,
 .section-copy_of_iw-learn dl.portlet .portletFooter a   {
-	/*background-color: #e6e6e6;
-	-moz-border-radius: 1em;
-	-webkit-border-radius: 1em;
-	border-radius: 1em;
-	padding: 0.3em 1em;
-	*/
+	
 	background: url('images_template/more_about.gif') no-repeat right center;
 	  height: 27px;
-    /*position: absolute;*/
-    /*float: left;*/
+    
     text-indent: -99px;
     width: 63px;
     overflow: hidden;
     border-bottom: 0;
-    /*margin:0;*/
+    
     display:block;
-}
-.section-iw-learn .FooterPortletManager1 dl.portlet .portletFooter a span {
+}*/
+/*.section-iw-learn .FooterPortletManager1 dl.portlet .portletFooter a span {
     margin-left: -99px;    
-}
+}*/
 /*.section-iw-learn .FooterPortletManager1 dl.portlet .portletFooter a {
     background-image:none;    
-}
+}*/
 .section-iw-learn .FooterPortletManager6 dl.portlet .portletFooter a {
 	display: none;
-}*/
+}
 .section-iw-learn #portlets-footer .cell,
 .section-copy_of_iw-learn #portlets-footer .cell  {
 	margin-left: 1.7%;
@@ -1051,10 +1045,10 @@ a.prev span  {
     /*padding-top:34px;*/
 }
 /* end carousel */
-
+/*
 dl.portlet dd.portletFooter {
     padding: 0 1em;
-}
+}*/
 #portal-header,.globalnav,#c-doormat {
     padding:0 5.555555555555555%;    
 }
@@ -1070,7 +1064,7 @@ img.image-left, img.image-right, .captioned img {
     clear:none; 
 }
 
-.more-carousel {
+/*.more-carousel {
     background-color: #DDDDDD;
     -moz-border-radius: 1em;
     -webkit-border-radius: 1em;
@@ -1078,7 +1072,7 @@ img.image-left, img.image-right, .captioned img {
     float: right;
    
     padding: 0.3em 0.5em;    
-}
+}*/
 
 /* from plonecustom.css */
 .ui-widget-content .ui-state-default {
@@ -1184,23 +1178,41 @@ margin-top:7px;
 max-height:100px;
 
 }
-.section-iw-learn #portlets-footer dl.portlet .portletFooter a.standardButton,
-.section-copy_of_iw-learn #portlets-footer dl.portlet .portletFooter a.standardButton {
-background:none;
+/*.section-iw-learn #portlets-footer dl.portlet .portletFooter a.standardButton,
+.section-copy_of_iw-learn #portlets-footer dl.portlet .portletFooter a.standardButton {*/
+.more-carousel,.section-iw-learn dl.portlet .portletFooter a,
+.section-copy_of_iw-learn dl.portlet .portletFooter a {
+/*background:none;
 text-indent:0;
 width:auto;
-height:auto;
-overflow:visible;
-float:right;
+height:auto;*/
+/*overflow:visible;*/
+/*float:right;*/
 background-color: #2d4a9a ;
     -moz-border-radius: 1em;
 	-webkit-border-radius: 1em;
 	border-radius: 1em;
-color: #ffffff;
+color: #ffffff !important;
 	padding: 0.5em 1em;
-	margin: 0.75em;
+	margin: 0.75em 0;
 text-align:center;
 }
+.section-iw-learn dl.portlet .portletFooter,
+.section-copy_of_iw-learn dl.portlet .portletFooter {
+    text-align:right;    
+}
+.section-iw-learn dl.portlet .portletFooter .hiddenStructure,
+.section-copy_of_iw-learn dl.portlet .portletFooter .hiddenStructure {
+    display:none;    
+}
+.more-carousel {
+    float:right;    
+}
+/* hide .portlet-static-image-link on old homepage */
+.portlet-static-image-link {
+    display:none;    
+}
+
 /* Large screens ----------- */ 
 @media only screen and (min-width : 1535px) {
     #visual-portal-wrapper {
