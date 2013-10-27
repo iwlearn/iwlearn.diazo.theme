@@ -579,7 +579,7 @@ a#quicklinks.linkson {
 
 
 div.BelowPortletManager1.width-1\:2 {
-	background: url('/images/home/splash-iwscience.png') no-repeat top right;
+	/*background: url('/images/home/splash-iwscience.png') no-repeat top right;*/
 	width: 67%;
 	margin-left: -100%;
 	/*overflow: hidden;*/
